@@ -9,22 +9,39 @@ dotenv.config();
 
 const app = express();
 
-// ===============================
+// =====================================
 // CORS
-// ===============================
+// =====================================
+
+const allowedOrigins = [
+  "https://rakhi-surprise-frontend.vercel.app",
+  "http://localhost:5500",
+  "http://127.0.0.1:5500"
+];
 
 app.use(
   cors({
-    origin: [
-      "https://rakhi-surprise-frontend.vercel.app",
-      "http://localhost:5500",
-      "http://127.0.0.1:5500"
-    ],
+    origin: function (origin, callback) {
+      // Postman / server-to-server / same-origin
+      if (!origin) {
+        return callback(null, true);
+      }
+
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      return callback(
+        new Error("Not allowed by CORS")
+      );
+    },
+
     methods: [
       "GET",
       "POST",
       "OPTIONS"
     ],
+
     allowedHeaders: [
       "Content-Type",
       "Authorization"
@@ -32,9 +49,9 @@ app.use(
   })
 );
 
-// ===============================
-// BODY
-// ===============================
+// =====================================
+// BODY PARSERS
+// =====================================
 
 app.use(express.json());
 
@@ -44,18 +61,15 @@ app.use(
   })
 );
 
-// ===============================
-// API
-// ===============================
+// =====================================
+// DATABASE
+// =====================================
 
-app.use(
-  "/api/rakhi",
-  rakhiRoutes
-);
+connectDB();
 
-// ===============================
-// HEALTH
-// ===============================
+// =====================================
+// HEALTH CHECK
+// =====================================
 
 app.get("/", (req, res) => {
   res.status(200).json({
@@ -64,12 +78,33 @@ app.get("/", (req, res) => {
   });
 });
 
-// ===============================
-// ERROR
-// ===============================
+// =====================================
+// API ROUTES
+// =====================================
+
+app.use(
+  "/api/rakhi",
+  rakhiRoutes
+);
+
+// =====================================
+// 404
+// =====================================
+
+app.use((req, res) => {
+  res.status(404).json({
+    success: false,
+    message: "API route not found",
+    path: req.originalUrl
+  });
+});
+
+// =====================================
+// ERROR HANDLER
+// =====================================
 
 app.use((err, req, res, next) => {
-  console.error("Server Error:", err);
+  console.error("SERVER ERROR:", err);
 
   res.status(500).json({
     success: false,
@@ -79,21 +114,23 @@ app.use((err, req, res, next) => {
   });
 });
 
-// ===============================
-// LOCAL ONLY
-// ===============================
+// =====================================
+// LOCAL DEVELOPMENT ONLY
+// =====================================
 
-const PORT =
-  process.env.PORT || 5000;
+if (process.env.NODE_ENV !== "production") {
+  const PORT =
+    process.env.PORT || 5000;
 
-if (
-  process.env.NODE_ENV !== "production"
-) {
   app.listen(PORT, () => {
     console.log(
       `Server running on port ${PORT}`
     );
   });
 }
+
+// =====================================
+// EXPORT FOR VERCEL
+// =====================================
 
 export default app;
