@@ -10,57 +10,23 @@ dotenv.config();
 const app = express();
 
 // =====================================
-// DATABASE
-// =====================================
-
-let dbConnected = false;
-
-async function initDB() {
-  if (!dbConnected) {
-    await connectDB();
-    dbConnected = true;
-  }
-}
-
-// =====================================
 // CORS
 // =====================================
 
-const allowedOrigins = [
-  "http://localhost:5500",
-  "http://127.0.0.1:5500",
-  "https://rakhi-surprise-frontend.vercel.app",
-];
-
 app.use(
   cors({
-    origin: function (origin, callback) {
-      // Allow requests without origin
-      // (Postman, server-side requests etc.)
-      if (!origin) {
-        return callback(null, true);
-      }
-
-      if (allowedOrigins.includes(origin)) {
-        return callback(null, true);
-      }
-
-      return callback(new Error("Not allowed by CORS"));
-    },
-
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-
-    allowedHeaders: [
-      "Content-Type",
-      "Authorization",
+    origin: [
+      "https://rakhi-surprise-frontend.vercel.app",
+      "http://localhost:5500",
+      "http://127.0.0.1:5500",
     ],
-
-    credentials: false,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
 // =====================================
-// BODY PARSERS
+// BODY
 // =====================================
 
 app.use(express.json());
@@ -72,44 +38,39 @@ app.use(
 );
 
 // =====================================
-// HEALTH CHECK
+// DATABASE
 // =====================================
 
-app.get("/", async (req, res) => {
+app.use(async (req, res, next) => {
   try {
-    await initDB();
-
-    res.status(200).json({
-      success: true,
-      message: "Rakhi Surprise Backend is running ❤️",
-    });
+    await connectDB();
+    next();
   } catch (error) {
-    console.error("Health Check Error:", error);
+    console.error("MongoDB Error:", error);
 
-    res.status(500).json({
+    return res.status(500).json({
       success: false,
-      message: error.message,
+      message: "Database connection failed",
     });
   }
 });
 
 // =====================================
-// API ROUTES
+// TEST
 // =====================================
 
-app.use("/api/rakhi", async (req, res, next) => {
-  try {
-    await initDB();
-    next();
-  } catch (error) {
-    console.error("Database connection error:", error);
+app.get("/", (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "Rakhi Surprise Backend is LIVE ❤️",
+  });
+});
 
-    res.status(500).json({
-      success: false,
-      message: "Database connection failed.",
-    });
-  }
-}, rakhiRoutes);
+// =====================================
+// RAKHI API
+// =====================================
+
+app.use("/api/rakhi", rakhiRoutes);
 
 // =====================================
 // 404
@@ -123,7 +84,7 @@ app.use((req, res) => {
 });
 
 // =====================================
-// ERROR HANDLER
+// ERROR
 // =====================================
 
 app.use((err, req, res, next) => {
@@ -134,9 +95,5 @@ app.use((err, req, res, next) => {
     message: err.message || "Internal Server Error",
   });
 });
-
-// =====================================
-// EXPORT FOR VERCEL
-// =====================================
 
 export default app;
