@@ -1739,8 +1739,11 @@
            BACKEND
         ------------------------------------------------ */
 
-        const apiUrl =
-          `/api/rakhi/${encodeURIComponent(slug)}`;
+        const API_BASE =
+  "https://rakhi-surprise-delta.vercel.app";
+
+const apiUrl =
+  `${API_BASE}/api/rakhi/${encodeURIComponent(slug)}`;
 
 
         console.log(

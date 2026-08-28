@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/rakhi/:slug",
+      "destination": "/surprise.html"
+    }
+  ]
+}
