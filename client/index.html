@@ -1,0 +1,3074 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+  />
+
+  <meta
+    name="theme-color"
+    content="#b31352"
+  />
+
+  <meta
+    name="description"
+    content="Create a beautiful personalized Raksha Bandhan surprise for your brother."
+  />
+
+  <title>
+    Rakhi Surprise ❤️ | Create Something Special
+  </title>
+
+  <style>
+    /* =========================================================
+       RESET
+    ========================================================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+
+      font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      color: #4d1830;
+
+      overflow-x: hidden;
+
+      background:
+        radial-gradient(
+          circle at 0% 0%,
+          rgba(255, 175, 205, 0.50),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 100% 5%,
+          rgba(255, 211, 126, 0.42),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 50% 100%,
+          rgba(255, 185, 214, 0.30),
+          transparent 32%
+        ),
+        linear-gradient(
+          135deg,
+          #fff4f8 0%,
+          #fff9f0 48%,
+          #ffedf4 100%
+        );
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    button {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+
+    /* =========================================================
+       FLOATING DECORATIONS
+    ========================================================= */
+
+    .decorations {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .float {
+      position: absolute;
+      opacity: 0.20;
+      animation: floatAround 8s ease-in-out infinite;
+    }
+
+    .float:nth-child(1) {
+      left: 3%;
+      top: 12%;
+      font-size: 30px;
+    }
+
+    .float:nth-child(2) {
+      right: 5%;
+      top: 18%;
+      font-size: 26px;
+      animation-delay: 1s;
+    }
+
+    .float:nth-child(3) {
+      left: 4%;
+      top: 48%;
+      font-size: 23px;
+      animation-delay: 2s;
+    }
+
+    .float:nth-child(4) {
+      right: 3%;
+      top: 55%;
+      font-size: 29px;
+      animation-delay: 3s;
+    }
+
+    .float:nth-child(5) {
+      left: 10%;
+      bottom: 8%;
+      font-size: 26px;
+      animation-delay: 4s;
+    }
+
+    .float:nth-child(6) {
+      right: 12%;
+      bottom: 14%;
+      font-size: 30px;
+      animation-delay: 5s;
+    }
+
+    @keyframes floatAround {
+      0%,
+      100% {
+        transform:
+          translateY(0)
+          rotate(0deg);
+      }
+
+      50% {
+        transform:
+          translateY(-20px)
+          rotate(10deg);
+      }
+    }
+
+
+    /* =========================================================
+       HERO
+    ========================================================= */
+
+    .hero {
+      position: relative;
+      z-index: 2;
+
+      text-align: center;
+
+      padding:
+        35px
+        15px
+        28px;
+    }
+
+    .rakhi-symbol {
+      width: 105px;
+      height: 105px;
+
+      margin: 0 auto 16px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      font-size: 56px;
+
+      background:
+        radial-gradient(
+          circle,
+          #fff 0 28%,
+          #ffe3ec 29% 46%,
+          #fff 47% 54%,
+          #f5b642 55% 62%,
+          #fff 63%
+        );
+
+      border:
+        4px solid
+        rgba(180, 39, 87, 0.13);
+
+      box-shadow:
+        0 20px 50px
+        rgba(170, 25, 79, 0.16);
+
+      animation:
+        rakhiPulse
+        2.4s
+        ease-in-out
+        infinite;
+    }
+
+    @keyframes rakhiPulse {
+      0%,
+      100% {
+        transform:
+          scale(1)
+          rotate(-2deg);
+      }
+
+      50% {
+        transform:
+          scale(1.07)
+          rotate(3deg);
+      }
+    }
+
+    .hero h1 {
+      font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+      font-size:
+        clamp(
+          37px,
+          8vw,
+          70px
+        );
+
+      line-height: 1;
+
+      color: #a90f4d;
+
+      letter-spacing: -1.5px;
+    }
+
+    .hero-subtitle {
+      max-width: 680px;
+
+      margin:
+        13px
+        auto
+        0;
+
+      color: #775064;
+
+      font-size:
+        clamp(
+          14px,
+          3vw,
+          18px
+        );
+
+      line-height: 1.7;
+    }
+
+    .hero-highlight {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 7px;
+
+      margin-top: 15px;
+
+      padding:
+        8px
+        15px;
+
+      border-radius: 999px;
+
+      background:
+        rgba(255, 255, 255, 0.78);
+
+      border:
+        1px solid
+        #f1bfd1;
+
+      color: #a91b53;
+
+      font-size: 12px;
+
+      font-weight: 800;
+    }
+
+
+    /* =========================================================
+       MAIN
+    ========================================================= */
+
+    .wrapper {
+      position: relative;
+      z-index: 3;
+
+      width:
+        min(
+          900px,
+          calc(100% - 18px)
+        );
+
+      margin:
+        10px auto
+        50px;
+    }
+
+    .card {
+      background:
+        rgba(255, 255, 255, 0.90);
+
+      backdrop-filter:
+        blur(18px);
+
+      -webkit-backdrop-filter:
+        blur(18px);
+
+      border:
+        1px solid
+        rgba(255,255,255,0.95);
+
+      border-radius: 30px;
+
+      padding:
+        clamp(
+          18px,
+          4vw,
+          38px
+        );
+
+      box-shadow:
+        0 30px 90px
+        rgba(110, 23, 57, 0.15);
+    }
+
+
+    /* =========================================================
+       SECTION
+    ========================================================= */
+
+    .section {
+      margin-bottom: 32px;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-heading {
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 11px;
+
+      margin-bottom: 17px;
+    }
+
+    .step {
+      width: 39px;
+      height: 39px;
+
+      min-width: 39px;
+
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      color: white;
+
+      background:
+        linear-gradient(
+          135deg,
+          #b31352,
+          #ec3671
+        );
+
+      font-size: 14px;
+
+      font-weight: 900;
+
+      box-shadow:
+        0 7px 20px
+        rgba(179, 19, 82, .24);
+    }
+
+    .section-heading h2 {
+      color: #641a39;
+
+      font-size:
+        clamp(
+          18px,
+          4vw,
+          23px
+        );
+    }
+
+    .section-heading p {
+      margin-top: 2px;
+
+      color: #967284;
+
+      font-size: 11px;
+
+      line-height: 1.5;
+    }
+
+
+    /* =========================================================
+       INPUTS
+    ========================================================= */
+
+    .field {
+      margin-bottom: 16px;
+    }
+
+    .field:last-child {
+      margin-bottom: 0;
+    }
+
+    .field label {
+      display: block;
+
+      margin-bottom: 8px;
+
+      color: #64253f;
+
+      font-size: 13px;
+
+      font-weight: 800;
+    }
+
+    .required {
+      color: #d00b4c;
+    }
+
+    .optional {
+      color: #a58090;
+
+      font-size: 11px;
+
+      font-weight: 500;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+
+      border:
+        1.5px solid
+        #edceda;
+
+      border-radius: 15px;
+
+      background:
+        rgba(255,255,255,.95);
+
+      color: #45142b;
+
+      padding:
+        14px
+        15px;
+
+      font-size: 16px;
+
+      outline: none;
+
+      transition:
+        border .2s ease,
+        box-shadow .2s ease;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #b195a1;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color:
+        #d72c69;
+
+      box-shadow:
+        0 0 0 4px
+        rgba(215, 44, 105, .08);
+    }
+
+    textarea {
+      min-height: 145px;
+
+      resize: vertical;
+
+      line-height: 1.65;
+    }
+
+    .hint {
+      margin-top: 6px;
+
+      color: #997282;
+
+      font-size: 11px;
+
+      line-height: 1.5;
+    }
+
+
+    /* =========================================================
+       PHONE
+    ========================================================= */
+
+    .phone-box {
+      position: relative;
+    }
+
+    .phone-prefix {
+      position: absolute;
+
+      left: 14px;
+      top: 50%;
+
+      transform:
+        translateY(-50%);
+
+      color: #8a2c4e;
+
+      font-size: 14px;
+
+      font-weight: 800;
+
+      pointer-events: none;
+
+      padding-right: 9px;
+
+      border-right:
+        1px solid
+        #ecd4dc;
+    }
+
+    .phone-input {
+      padding-left: 60px;
+    }
+
+
+    /* =========================================================
+       UPLOAD GRID
+    ========================================================= */
+
+    .upload-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          2,
+          minmax(0,1fr)
+        );
+
+      gap: 15px;
+    }
+
+    .upload-box {
+      min-width: 0;
+
+      padding: 17px;
+
+      text-align: center;
+
+      border:
+        1.5px dashed
+        #dfb5c7;
+
+      border-radius: 21px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #fff8fb,
+          #fffdf8
+        );
+    }
+
+    .upload-icon {
+      font-size: 35px;
+
+      margin-bottom: 7px;
+    }
+
+    .upload-box h3 {
+      color: #6a1a3a;
+
+      font-size: 14px;
+
+      margin-bottom: 4px;
+    }
+
+    .upload-box p {
+      color: #997285;
+
+      font-size: 11px;
+
+      line-height: 1.5;
+
+      margin-bottom: 12px;
+    }
+
+    .upload-buttons {
+      display: grid;
+
+      grid-template-columns:
+        1fr
+        1fr;
+
+      gap: 8px;
+    }
+
+    .upload-button {
+      position: relative;
+
+      min-height: 48px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 12px;
+
+      border:
+        1px solid
+        #efd0dc;
+
+      background:
+        white;
+
+      color: #9d164c;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      cursor: pointer;
+
+      overflow: hidden;
+
+      transition: .2s;
+    }
+
+    .upload-button:hover {
+      background: #fff2f7;
+
+      transform:
+        translateY(-2px);
+    }
+
+    .upload-button input {
+      position: absolute;
+
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      opacity: 0;
+
+      cursor: pointer;
+
+      padding: 0;
+
+      border: 0;
+    }
+
+    .preview {
+      display: none;
+
+      margin-top: 13px;
+
+      padding: 9px;
+
+      border-radius: 15px;
+
+      background:
+        white;
+
+      border:
+        1px solid
+        #efd9e1;
+    }
+
+    .preview img {
+      width: 100%;
+
+      height: 180px;
+
+      object-fit: contain;
+
+      border-radius: 11px;
+
+      background:
+        #fff8fb;
+    }
+
+    .remove-button {
+      width: 100%;
+
+      margin-top: 8px;
+
+      border: 0;
+
+      border-radius: 10px;
+
+      padding: 8px;
+
+      background:
+        #fff0f5;
+
+      color:
+        #b31955;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      cursor: pointer;
+    }
+
+
+    /* =========================================================
+       MESSAGE QUICK BUTTONS
+    ========================================================= */
+
+    .quick-buttons {
+      display: flex;
+
+      gap: 7px;
+
+      flex-wrap: wrap;
+
+      margin-bottom: 9px;
+    }
+
+    .quick-button {
+      border:
+        1px solid
+        #efb3c9;
+
+      border-radius: 999px;
+
+      background:
+        #fff7fa;
+
+      color: #a51b53;
+
+      padding:
+        8px 11px;
+
+      font-size: 11px;
+
+      font-weight: 700;
+
+      cursor: pointer;
+    }
+
+    .counter {
+      text-align: right;
+
+      margin-top: 5px;
+
+      color: #9f7185;
+
+      font-size: 11px;
+    }
+
+
+    /* =========================================================
+       GIFT / UPI
+    ========================================================= */
+
+    .gift-box {
+      padding: 19px;
+
+      border:
+        1px solid
+        #efd3a4;
+
+      border-radius: 21px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fff8e8,
+          #fff3f7
+        );
+    }
+
+    .gift-title {
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      margin-bottom: 15px;
+    }
+
+    .gift-icon {
+      width: 43px;
+      height: 43px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 13px;
+
+      background:
+        white;
+
+      font-size: 22px;
+
+      box-shadow:
+        0 7px 17px
+        rgba(90,50,10,.06);
+    }
+
+    .gift-title h3 {
+      color: #70430d;
+
+      font-size: 17px;
+    }
+
+    .gift-title p {
+      margin-top: 2px;
+
+      color: #97734a;
+
+      font-size: 11px;
+    }
+
+
+    /* =========================================================
+       SUBMIT
+    ========================================================= */
+
+    .submit-area {
+      margin-top: 8px;
+
+      padding-top: 25px;
+
+      border-top:
+        1px dashed
+        #efcada;
+    }
+
+    .submit-button {
+      position: relative;
+
+      width: 100%;
+
+      min-height: 62px;
+
+      border: none;
+
+      border-radius: 18px;
+
+      color: white;
+
+      background:
+        linear-gradient(
+          135deg,
+          #b31352,
+          #e42e72,
+          #ff8142
+        );
+
+      font-size: 17px;
+
+      font-weight: 900;
+
+      cursor: pointer;
+
+      box-shadow:
+        0 15px 35px
+        rgba(179, 19, 82, .25);
+
+      transition:
+        transform .2s ease,
+        opacity .2s ease;
+    }
+
+    .submit-button:hover {
+      transform:
+        translateY(-2px);
+    }
+
+    .submit-button:disabled {
+      opacity: .7;
+
+      cursor: wait;
+
+      transform: none;
+    }
+
+    .submit-note {
+      text-align: center;
+
+      margin-top: 11px;
+
+      color: #937183;
+
+      font-size: 11px;
+
+      line-height: 1.6;
+    }
+
+
+    /* =========================================================
+       LOADING
+    ========================================================= */
+
+    .loading {
+      display: none;
+
+      margin-top: 18px;
+
+      text-align: center;
+
+      padding: 18px;
+
+      border-radius: 16px;
+
+      background:
+        #fff5f9;
+
+      border:
+        1px solid
+        #f2d4df;
+    }
+
+    .spinner {
+      width: 42px;
+      height: 42px;
+
+      margin: auto;
+
+      border:
+        4px solid
+        #f4d6e2;
+
+      border-top-color:
+        #b31352;
+
+      border-radius: 50%;
+
+      animation:
+        spin .8s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .loading h3 {
+      margin-top: 10px;
+
+      color: #6c1c3d;
+
+      font-size: 15px;
+    }
+
+    .loading p {
+      margin-top: 4px;
+
+      color: #987083;
+
+      font-size: 11px;
+    }
+
+
+    /* =========================================================
+       SUCCESS
+    ========================================================= */
+
+    .success {
+      display: none;
+
+      margin-top: 18px;
+
+      padding: 22px;
+
+      border-radius: 20px;
+
+      text-align: center;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fff3f8,
+          #fff8eb
+        );
+
+      border:
+        1px solid
+        #f1d0dc;
+    }
+
+    .success-icon {
+      font-size: 48px;
+    }
+
+    .success h3 {
+      margin-top: 7px;
+
+      color: #a61450;
+
+      font-size: 23px;
+    }
+
+    .success p {
+      margin-top: 5px;
+
+      color: #795266;
+
+      font-size: 13px;
+
+      line-height: 1.6;
+    }
+
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
+    footer {
+      position: relative;
+
+      z-index: 2;
+
+      padding:
+        0 15px
+        35px;
+
+      text-align: center;
+
+      color: #936e7e;
+
+      font-size: 12px;
+
+      line-height: 1.7;
+    }
+
+
+    /* =========================================================
+       CONFETTI
+    ========================================================= */
+
+    .confetti {
+      position: fixed;
+
+      top: -20px;
+
+      z-index: 1000;
+
+      pointer-events: none;
+
+      font-size: 15px;
+
+      animation:
+        fall
+        3.2s
+        linear
+        forwards;
+    }
+
+    @keyframes fall {
+      from {
+        transform:
+          translateY(-20px)
+          rotate(0deg);
+
+        opacity: 1;
+      }
+
+      to {
+        transform:
+          translateY(110vh)
+          rotate(720deg);
+
+        opacity: 0;
+      }
+    }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 650px) {
+
+      .hero {
+        padding-top: 25px;
+      }
+
+      .rakhi-symbol {
+        width: 82px;
+        height: 82px;
+        font-size: 44px;
+      }
+
+      .hero h1 {
+        font-size: 47px;
+
+        letter-spacing: -1px;
+      }
+
+      .hero-subtitle {
+        font-size: 12px;
+      }
+
+      .wrapper {
+        width:
+          calc(100% - 12px);
+      }
+
+      .card {
+        padding:
+          18px 13px;
+
+        border-radius:
+          23px;
+      }
+
+      .upload-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .upload-buttons {
+        grid-template-columns: 1fr;
+      }
+
+      input,
+      textarea {
+        font-size: 16px;
+      }
+
+      .submit-button {
+        font-size: 15px;
+      }
+    }
+
+
+    /* =========================================================
+       EXTRA SMALL
+    ========================================================= */
+
+    @media (max-width: 360px) {
+
+      .hero h1 {
+        font-size: 41px;
+      }
+
+      .card {
+        padding:
+          15px 10px;
+      }
+
+      .step {
+        width: 34px;
+        height: 34px;
+        min-width: 34px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =======================================================
+       BACKGROUND
+  ======================================================== -->
+
+  <div class="decorations">
+
+    <span class="float">🌸</span>
+    <span class="float">❤️</span>
+    <span class="float">✨</span>
+    <span class="float">🎀</span>
+    <span class="float">🍬</span>
+    <span class="float">💖</span>
+
+  </div>
+
+
+  <!-- =======================================================
+       HERO
+  ======================================================== -->
+
+  <header class="hero">
+
+    <div class="rakhi-symbol">
+      🪢
+    </div>
+
+    <h1>
+      Happy Raksha Bandhan ❤️
+    </h1>
+
+    <p class="hero-subtitle">
+      Apne brother ke liye ek beautiful surprise create karein —
+      memories, message aur bahut saare pyaar ke saath. 🥰
+    </p>
+
+    <div class="hero-highlight">
+      🎀 Made With Sister's Love
+    </div>
+
+  </header>
+
+
+  <!-- =======================================================
+       MAIN FORM
+  ======================================================== -->
+
+  <main class="wrapper">
+
+    <div class="card">
+
+      <form
+        id="rakhiForm"
+        enctype="multipart/form-data"
+      >
+
+
+        <!-- ===================================================
+             SECTION 1
+        ==================================================== -->
+
+        <section class="section">
+
+          <div class="section-heading">
+
+            <div class="step">
+              1
+            </div>
+
+            <div>
+
+              <h2>
+                Brother's Details 💕
+              </h2>
+
+              <p>
+                Sirf basic details enter karein.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- SISTER NAME -->
+
+          <div class="field">
+
+            <label for="sisterName">
+
+              Sister's Name
+
+              <span class="required">
+                *
+              </span>
+
+            </label>
+
+            <input
+              type="text"
+              id="sisterName"
+              name="sisterName"
+              placeholder="Enter your name"
+              maxlength="80"
+              autocomplete="name"
+              required
+            />
+
+          </div>
+
+
+          <!-- BROTHER NAME -->
+
+          <div class="field">
+
+            <label for="brotherName">
+
+              Brother's Name
+
+              <span class="optional">
+                (optional)
+              </span>
+
+            </label>
+
+            <input
+              type="text"
+              id="brotherName"
+              name="brotherName"
+              placeholder="Enter brother's name"
+              maxlength="80"
+              autocomplete="off"
+            />
+
+          </div>
+
+
+          <!-- PHONE -->
+
+          <div class="field">
+
+            <label for="brotherPhone">
+
+              Brother's WhatsApp Number
+
+              <span class="required">
+                *
+              </span>
+
+            </label>
+
+
+            <div class="phone-box">
+
+              <span class="phone-prefix">
+                +91
+              </span>
+
+              <input
+                type="tel"
+                id="brotherPhone"
+                name="brotherPhone"
+                class="phone-input"
+                placeholder="10 digit WhatsApp number"
+                inputmode="numeric"
+                maxlength="10"
+                autocomplete="tel"
+                required
+              />
+
+            </div>
+
+
+            <div class="hint">
+              Submit ke baad isi number par WhatsApp open hoga.
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- ===================================================
+             SECTION 2
+        ==================================================== -->
+
+        <section class="section">
+
+          <div class="section-heading">
+
+            <div class="step">
+              2
+            </div>
+
+            <div>
+
+              <h2>
+                Add Beautiful Photos 📸
+              </h2>
+
+              <p>
+                Dono photos completely optional hain.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="upload-grid">
+
+
+            <!-- SISTER PHOTO -->
+
+            <div class="upload-box">
+
+              <div class="upload-icon">
+                👩
+              </div>
+
+              <h3>
+                Your Photo
+                <span class="optional">
+                  (optional)
+                </span>
+              </h3>
+
+              <p>
+                Gallery se choose karein
+                ya camera se abhi click karein.
+              </p>
+
+
+              <div class="upload-buttons">
+
+                <label class="upload-button">
+
+                  📷 Camera
+
+                  <input
+                    type="file"
+                    id="sisterCamera"
+                    accept="image/*"
+                    capture="user"
+                  />
+
+                </label>
+
+
+                <label class="upload-button">
+
+                  🖼️ Gallery
+
+                  <input
+                    type="file"
+                    id="sisterPhoto"
+                    name="sisterPhoto"
+                    accept="image/*"
+                  />
+
+                </label>
+
+              </div>
+
+
+              <div
+                class="preview"
+                id="sisterPreview"
+              >
+
+                <img
+                  id="sisterPreviewImg"
+                  alt="Sister photo preview"
+                />
+
+                <button
+                  type="button"
+                  class="remove-button"
+                  onclick="removePhoto('sister')"
+                >
+                  Remove Photo
+                </button>
+
+              </div>
+
+            </div>
+
+
+            <!-- RAKHI PHOTO -->
+
+            <div class="upload-box">
+
+              <div class="upload-icon">
+                🎀
+              </div>
+
+              <h3>
+                Rakhi Photo
+                <span class="optional">
+                  (optional)
+                </span>
+              </h3>
+
+              <p>
+                Apni favourite Rakhi ki photo upload karein.
+              </p>
+
+
+              <div class="upload-buttons">
+
+                <label class="upload-button">
+
+                  📷 Camera
+
+                  <input
+                    type="file"
+                    id="rakhiCamera"
+                    accept="image/*"
+                    capture="environment"
+                  />
+
+                </label>
+
+
+                <label class="upload-button">
+
+                  🖼️ Gallery
+
+                  <input
+                    type="file"
+                    id="rakhiPhoto"
+                    name="rakhiPhoto"
+                    accept="image/*"
+                  />
+
+                </label>
+
+              </div>
+
+
+              <div
+                class="preview"
+                id="rakhiPreview"
+              >
+
+                <img
+                  id="rakhiPreviewImg"
+                  alt="Rakhi photo preview"
+                />
+
+                <button
+                  type="button"
+                  class="remove-button"
+                  onclick="removePhoto('rakhi')"
+                >
+                  Remove Photo
+                </button>
+
+              </div>
+
+            </div>
+
+
+          </div>
+
+        </section>
+
+
+        <!-- ===================================================
+             SECTION 3
+        ==================================================== -->
+
+        <section class="section">
+
+          <div class="section-heading">
+
+            <div class="step">
+              3
+            </div>
+
+            <div>
+
+              <h2>
+                Payment / Gift QR 💝
+              </h2>
+
+              <p>
+                Completely optional.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="gift-box">
+
+            <div class="gift-title">
+
+              <div class="gift-icon">
+                🎁
+              </div>
+
+              <div>
+
+                <h3>
+                  Rakhi Gift Details
+                </h3>
+
+                <p>
+                  UPI ID ya QR share kar sakti hain.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <!-- UPI ID -->
+
+            <div class="field">
+
+              <label for="upiId">
+
+                UPI ID
+
+                <span class="optional">
+                  (optional)
+                </span>
+
+              </label>
+
+              <input
+                type="text"
+                id="upiId"
+                name="upiId"
+                placeholder="example@upi"
+                maxlength="120"
+                autocomplete="off"
+              />
+
+            </div>
+
+
+            <!-- QR -->
+
+            <div class="upload-box">
+
+              <div class="upload-icon">
+                💳
+              </div>
+
+              <h3>
+                Payment QR
+                <span class="optional">
+                  (optional)
+                </span>
+              </h3>
+
+              <p>
+                QR image upload karein ya camera se click karein.
+              </p>
+
+
+              <div class="upload-buttons">
+
+                <label class="upload-button">
+
+                  📷 Camera
+
+                  <input
+                    type="file"
+                    id="qrCamera"
+                    accept="image/*"
+                    capture="environment"
+                  />
+
+                </label>
+
+
+                <label class="upload-button">
+
+                  🖼️ Gallery
+
+                  <input
+                    type="file"
+                    id="qrPhoto"
+                    name="qrPhoto"
+                    accept="image/*"
+                  />
+
+                </label>
+
+              </div>
+
+
+              <div
+                class="preview"
+                id="qrPreview"
+              >
+
+                <img
+                  id="qrPreviewImg"
+                  alt="Payment QR preview"
+                />
+
+                <button
+                  type="button"
+                  class="remove-button"
+                  onclick="removePhoto('qr')"
+                >
+                  Remove QR
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <!-- ===================================================
+             SECTION 4
+        ==================================================== -->
+
+        <section class="section">
+
+          <div class="section-heading">
+
+            <div class="step">
+              4
+            </div>
+
+            <div>
+
+              <h2>
+                Brother Ke Liye Message 💌
+              </h2>
+
+              <p>
+                Ye bhi optional hai.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="quick-buttons">
+
+            <button
+              type="button"
+              class="quick-button"
+              onclick="setMessage('sweet')"
+            >
+              💖 Sweet
+            </button>
+
+            <button
+              type="button"
+              class="quick-button"
+              onclick="setMessage('emotional')"
+            >
+              🥹 Emotional
+            </button>
+
+            <button
+              type="button"
+              class="quick-button"
+              onclick="setMessage('funny')"
+            >
+              😂 Funny
+            </button>
+
+          </div>
+
+
+          <textarea
+            id="message"
+            name="message"
+            maxlength="1000"
+            placeholder="Bhaiya ke liye kuch special likhiye... ❤️"
+          ></textarea>
+
+
+          <div
+            class="counter"
+            id="counter"
+          >
+            0 / 1000
+          </div>
+
+        </section>
+
+
+        <!-- ===================================================
+             SUBMIT
+        ==================================================== -->
+
+        <div class="submit-area">
+
+          <button
+            type="submit"
+            id="submitBtn"
+            class="submit-button"
+          >
+
+            🎀 Create My Rakhi Surprise ❤️
+
+          </button>
+
+
+          <div class="submit-note">
+
+            🔐 Photos optional hain. Submit ke baad
+            brother ka WhatsApp automatically open hoga.
+
+          </div>
+
+
+          <!-- LOADING -->
+
+          <div
+            class="loading"
+            id="loading"
+          >
+
+            <div class="spinner"></div>
+
+            <h3>
+              Creating Your Surprise...
+            </h3>
+
+            <p>
+              Photos upload aur surprise prepare ho raha hai. Please wait ❤️
+            </p>
+
+          </div>
+
+
+          <!-- SUCCESS -->
+
+          <div
+            class="success"
+            id="success"
+          >
+
+            <div class="success-icon">
+              🎉
+            </div>
+
+            <h3>
+              Surprise Ready!
+            </h3>
+
+            <p>
+              WhatsApp open ho raha hai...
+              <br />
+              Brother ko aapka surprise mil jayega. 💌
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </form>
+
+    </div>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    Made with ❤️ for the beautiful
+    Brother & Sister bond 🪢
+
+  </footer>
+
+
+  <script>
+
+    /* =========================================================
+       CONFIG
+    ========================================================= */
+
+    /*
+      IMPORTANT
+
+      Local backend:
+      http://localhost:5000
+
+      API:
+      /api/rakhi/create
+    */
+
+    const API_BASE =
+      "http://localhost:5000";
+
+
+    const CREATE_URL =
+      `${API_BASE}/api/rakhi/create`;
+
+
+    /* =========================================================
+       DOM
+    ========================================================= */
+
+    const form =
+      document.getElementById(
+        "rakhiForm"
+      );
+
+
+    const submitBtn =
+      document.getElementById(
+        "submitBtn"
+      );
+
+
+    const loading =
+      document.getElementById(
+        "loading"
+      );
+
+
+    const success =
+      document.getElementById(
+        "success"
+      );
+
+
+    const messageBox =
+      document.getElementById(
+        "message"
+      );
+
+
+    const counter =
+      document.getElementById(
+        "counter"
+      );
+
+
+    const brotherPhone =
+      document.getElementById(
+        "brotherPhone"
+      );
+
+
+    /* =========================================================
+       PHOTO STATE
+    ========================================================= */
+
+    let sisterPhotoFile = null;
+
+    let rakhiPhotoFile = null;
+
+    let qrPhotoFile = null;
+
+
+    /* =========================================================
+       PHONE INPUT
+    ========================================================= */
+
+    brotherPhone.addEventListener(
+      "input",
+      function () {
+
+        this.value =
+          this.value
+            .replace(/\D/g, "")
+            .slice(0, 10);
+
+      }
+    );
+
+
+    /* =========================================================
+       MESSAGE COUNTER
+    ========================================================= */
+
+    messageBox.addEventListener(
+      "input",
+      function () {
+
+        counter.textContent =
+          `${this.value.length} / 1000`;
+
+      }
+    );
+
+
+    /* =========================================================
+       QUICK MESSAGES
+    ========================================================= */
+
+    function setMessage(type) {
+
+      let text = "";
+
+
+      if (type === "sweet") {
+
+        text =
+          "Happy Raksha Bandhan Bhaiya! ❤️ Aap mere liye sirf mere brother nahi, balki mere best friend aur meri strength ho. Hamesha mere saath rehna. Love you Bhaiya! 🥰🪢";
+
+      }
+
+
+      if (type === "emotional") {
+
+        text =
+          "Happy Rakhi Bhaiya! 🥹❤️ Bachpan ki saari fights aur masti ke baad bhi aap meri life ke sabse special person ho. Bhagwan hamesha aapko khush rakhe. Love you forever! 🪢💖";
+
+      }
+
+
+      if (type === "funny") {
+
+        text =
+          "Happy Rakhi Bhaiya! 😂🪢 Rakhi bandh di hai, ab gift dene ke liye ready ho jao! Is baar excuse nahi chalega. 😎🎁 Love you Bhaiya! ❤️";
+
+      }
+
+
+      messageBox.value =
+        text;
+
+
+      counter.textContent =
+        `${text.length} / 1000`;
+
+
+      messageBox.focus();
+
+    }
+
+
+    /* =========================================================
+       PHOTO PREVIEW
+    ========================================================= */
+
+    function setupPhoto(
+      input,
+      type
+    ) {
+
+      input.addEventListener(
+        "change",
+        function () {
+
+          const file =
+            this.files &&
+            this.files[0];
+
+
+          if (!file) {
+            return;
+          }
+
+
+          /* image check */
+
+          if (
+            !file.type.startsWith("image/")
+          ) {
+
+            alert(
+              "Please sirf image file select karein."
+            );
+
+            this.value = "";
+
+            return;
+
+          }
+
+
+          /* maximum 10 MB */
+
+          if (
+            file.size >
+            10 * 1024 * 1024
+          ) {
+
+            alert(
+              "Image 10MB se kam honi chahiye."
+            );
+
+            this.value = "";
+
+            return;
+
+          }
+
+
+          /* save selected file */
+
+          if (
+            type === "sister"
+          ) {
+
+            sisterPhotoFile =
+              file;
+
+          }
+
+
+          if (
+            type === "rakhi"
+          ) {
+
+            rakhiPhotoFile =
+              file;
+
+          }
+
+
+          if (
+            type === "qr"
+          ) {
+
+            qrPhotoFile =
+              file;
+
+          }
+
+
+          showPreview(
+            file,
+            type
+          );
+
+        }
+      );
+
+    }
+
+
+    /* =========================================================
+       SHOW PREVIEW
+    ========================================================= */
+
+    function showPreview(
+      file,
+      type
+    ) {
+
+      let previewId;
+      let imageId;
+
+
+      if (
+        type === "sister"
+      ) {
+
+        previewId =
+          "sisterPreview";
+
+        imageId =
+          "sisterPreviewImg";
+
+      }
+
+
+      if (
+        type === "rakhi"
+      ) {
+
+        previewId =
+          "rakhiPreview";
+
+        imageId =
+          "rakhiPreviewImg";
+
+      }
+
+
+      if (
+        type === "qr"
+      ) {
+
+        previewId =
+          "qrPreview";
+
+        imageId =
+          "qrPreviewImg";
+
+      }
+
+
+      const preview =
+        document.getElementById(
+          previewId
+        );
+
+
+      const image =
+        document.getElementById(
+          imageId
+        );
+
+
+      const reader =
+        new FileReader();
+
+
+      reader.onload =
+        function (event) {
+
+          image.src =
+            event.target.result;
+
+          preview.style.display =
+            "block";
+
+        };
+
+
+      reader.readAsDataURL(
+        file
+      );
+
+    }
+
+
+    /* =========================================================
+       SETUP FILE INPUTS
+    ========================================================= */
+
+    setupPhoto(
+      document.getElementById(
+        "sisterPhoto"
+      ),
+      "sister"
+    );
+
+
+    setupPhoto(
+      document.getElementById(
+        "sisterCamera"
+      ),
+      "sister"
+    );
+
+
+    setupPhoto(
+      document.getElementById(
+        "rakhiPhoto"
+      ),
+      "rakhi"
+    );
+
+
+    setupPhoto(
+      document.getElementById(
+        "rakhiCamera"
+      ),
+      "rakhi"
+    );
+
+
+    setupPhoto(
+      document.getElementById(
+        "qrPhoto"
+      ),
+      "qr"
+    );
+
+
+    setupPhoto(
+      document.getElementById(
+        "qrCamera"
+      ),
+      "qr"
+    );
+
+
+    /* =========================================================
+       REMOVE PHOTO
+    ========================================================= */
+
+    function removePhoto(type) {
+
+      if (
+        type === "sister"
+      ) {
+
+        sisterPhotoFile =
+          null;
+
+        document.getElementById(
+          "sisterPhoto"
+        ).value = "";
+
+        document.getElementById(
+          "sisterCamera"
+        ).value = "";
+
+        document.getElementById(
+          "sisterPreview"
+        ).style.display =
+          "none";
+
+      }
+
+
+      if (
+        type === "rakhi"
+      ) {
+
+        rakhiPhotoFile =
+          null;
+
+        document.getElementById(
+          "rakhiPhoto"
+        ).value = "";
+
+        document.getElementById(
+          "rakhiCamera"
+        ).value = "";
+
+        document.getElementById(
+          "rakhiPreview"
+        ).style.display =
+          "none";
+
+      }
+
+
+      if (
+        type === "qr"
+      ) {
+
+        qrPhotoFile =
+          null;
+
+        document.getElementById(
+          "qrPhoto"
+        ).value = "";
+
+        document.getElementById(
+          "qrCamera"
+        ).value = "";
+
+        document.getElementById(
+          "qrPreview"
+        ).style.display =
+          "none";
+
+      }
+
+    }
+
+
+    /* =========================================================
+       CONFETTI
+    ========================================================= */
+
+    function confetti() {
+
+      const items = [
+        "❤️",
+        "💖",
+        "🎀",
+        "✨",
+        "🌸",
+        "🍬",
+        "🪢"
+      ];
+
+
+      for (
+        let i = 0;
+        i < 45;
+        i++
+      ) {
+
+        const element =
+          document.createElement(
+            "div"
+          );
+
+
+        element.className =
+          "confetti";
+
+
+        element.textContent =
+          items[
+            Math.floor(
+              Math.random() *
+              items.length
+            )
+          ];
+
+
+        element.style.left =
+          `${Math.random() * 100}%`;
+
+
+        element.style.animationDelay =
+          `${Math.random() * 1.3}s`;
+
+
+        element.style.fontSize =
+          `${10 + Math.random() * 14}px`;
+
+
+        document.body.appendChild(
+          element
+        );
+
+
+        setTimeout(
+          () => element.remove(),
+          4500
+        );
+
+      }
+
+    }
+
+
+    /* =========================================================
+       NORMALIZE PHONE
+    ========================================================= */
+
+    function normalizePhone(
+      value
+    ) {
+
+      let phone =
+        String(value || "")
+          .replace(/\D/g, "");
+
+
+      /*
+        10 digit:
+        9876543210
+
+        becomes:
+        919876543210
+      */
+
+      if (
+        phone.length === 10
+      ) {
+
+        phone =
+          "91" + phone;
+
+      }
+
+
+      return phone;
+
+    }
+
+
+    /* =========================================================
+       CREATE WHATSAPP URL
+    ========================================================= */
+
+    function createWhatsAppUrl(
+      phone,
+      sisterName,
+      brotherName,
+      surpriseUrl
+    ) {
+
+      const finalBrotherName =
+        brotherName ||
+        "Bhaiya";
+
+
+      const text =
+
+`🎀✨ *Happy Raksha Bandhan ${finalBrotherName}! ❤️* ✨🎀
+
+${sisterName} ne aapke liye ek special Rakhi Surprise banaya hai. 🥰
+
+💌 Ek special message
+📸 Beautiful memories
+🎁 Aur bahut saara pyaar
+
+👇 *Open Your Rakhi Surprise:*
+
+${surpriseUrl}
+
+🪢❤️ Happy Raksha Bandhan! ❤️🪢
+
+— With lots of love from ${sisterName}`;
+
+
+      return (
+        `https://wa.me/${phone}?text=` +
+        encodeURIComponent(
+          text
+        )
+      );
+
+    }
+
+
+    /* =========================================================
+       FORM SUBMIT
+    ========================================================= */
+
+    form.addEventListener(
+      "submit",
+      async function (event) {
+
+        /*
+          This prevents normal browser form refresh.
+        */
+
+        event.preventDefault();
+
+
+        /*
+          Prevent duplicate requests.
+        */
+
+        if (
+          submitBtn.disabled
+        ) {
+
+          return;
+
+        }
+
+
+        /* ==============================================
+           GET VALUES
+        =============================================== */
+
+        const sisterName =
+          document
+            .getElementById(
+              "sisterName"
+            )
+            .value
+            .trim();
+
+
+        const brotherName =
+          document
+            .getElementById(
+              "brotherName"
+            )
+            .value
+            .trim();
+
+
+        const phone =
+          brotherPhone.value.trim();
+
+
+        /*
+          IMPORTANT:
+          upiId yahan properly declared hai.
+        */
+
+        const upiId =
+          document
+            .getElementById(
+              "upiId"
+            )
+            .value
+            .trim();
+
+
+        const message =
+          messageBox.value.trim();
+
+
+        /* ==============================================
+           VALIDATION
+        =============================================== */
+
+        if (!sisterName) {
+
+          alert(
+            "Please apna name enter karein ❤️"
+          );
+
+          document
+            .getElementById(
+              "sisterName"
+            )
+            .focus();
+
+          return;
+
+        }
+
+
+        if (!phone) {
+
+          alert(
+            "Please brother ka WhatsApp number enter karein 📱"
+          );
+
+          brotherPhone.focus();
+
+          return;
+
+        }
+
+
+        const cleanPhone =
+          normalizePhone(
+            phone
+          );
+
+
+        if (
+          !/^91[6-9]\d{9}$/.test(
+            cleanPhone
+          )
+        ) {
+
+          alert(
+            "Please valid Indian WhatsApp number enter karein."
+          );
+
+          brotherPhone.focus();
+
+          return;
+
+        }
+
+
+        /* ==============================================
+           FORM DATA
+        =============================================== */
+
+        const formData =
+          new FormData();
+
+
+        /*
+          TEXT FIELDS
+        */
+
+        formData.append(
+          "sisterName",
+          sisterName
+        );
+
+
+        formData.append(
+          "brotherName",
+          brotherName
+        );
+
+
+        /*
+          Backend ko phone 91 ke saath bhej rahe hain.
+        */
+
+        formData.append(
+          "brotherPhone",
+          cleanPhone
+        );
+
+
+        formData.append(
+          "message",
+          message
+        );
+
+
+        formData.append(
+          "upiId",
+          upiId
+        );
+
+
+        /*
+          OPTIONAL IMAGE FILES
+        */
+
+        if (
+          sisterPhotoFile
+        ) {
+
+          formData.append(
+            "sisterPhoto",
+            sisterPhotoFile
+          );
+
+        }
+
+
+        if (
+          rakhiPhotoFile
+        ) {
+
+          formData.append(
+            "rakhiPhoto",
+            rakhiPhotoFile
+          );
+
+        }
+
+
+        if (
+          qrPhotoFile
+        ) {
+
+          formData.append(
+            "qrPhoto",
+            qrPhotoFile
+          );
+
+        }
+
+
+        /* ==============================================
+           LOADING STATE
+        =============================================== */
+
+        submitBtn.disabled =
+          true;
+
+
+        submitBtn.innerHTML =
+          "⏳ Creating Your Surprise...";
+
+
+        loading.style.display =
+          "block";
+
+
+        success.style.display =
+          "none";
+
+
+        /* ==============================================
+           API REQUEST
+        =============================================== */
+
+        try {
+
+          console.log(
+            "================================"
+          );
+
+          console.log(
+            "Creating Rakhi surprise..."
+          );
+
+          console.log(
+            "API:",
+            CREATE_URL
+          );
+
+
+          /*
+            IMPORTANT:
+            No Content-Type header manually.
+            Browser FormData ka boundary khud set karega.
+          */
+
+          const response =
+            await fetch(
+              CREATE_URL,
+              {
+                method: "POST",
+
+                body: formData
+              }
+            );
+
+
+          /*
+            Read response safely.
+          */
+
+          const responseText =
+            await response.text();
+
+
+          let result = null;
+
+
+          try {
+
+            result =
+              responseText
+                ? JSON.parse(
+                    responseText
+                  )
+                : null;
+
+          } catch (
+            parseError
+          ) {
+
+            console.error(
+              "Server returned:",
+              responseText
+            );
+
+            throw new Error(
+              "Server ne valid JSON response nahi diya."
+            );
+
+          }
+
+
+          console.log(
+            "Response status:",
+            response.status
+          );
+
+
+          console.log(
+            "Response:",
+            result
+          );
+
+
+          /* ==========================================
+             SERVER ERROR
+          =========================================== */
+
+          if (
+            !response.ok
+          ) {
+
+            throw new Error(
+              result?.message ||
+              result?.error ||
+              `Server Error: ${response.status}`
+            );
+
+          }
+
+
+          /* ==========================================
+             SUCCESS CHECK
+          =========================================== */
+
+          if (
+            !result ||
+            result.success !== true
+          ) {
+
+            throw new Error(
+              result?.message ||
+              "Rakhi surprise create nahi hua."
+            );
+
+          }
+
+
+          /* ==========================================
+             GET SLUG / ID
+          =========================================== */
+
+          const slug =
+            result.slug ||
+            result.rakhiId ||
+            result.surpriseId ||
+            result.data?.slug ||
+            result.data?.rakhiId ||
+            result.data?.surpriseId ||
+            result.data?.id;
+
+
+          if (
+            !slug
+          ) {
+
+            console.error(
+              "Missing slug in response:",
+              result
+            );
+
+            throw new Error(
+              "Server ne surprise ka unique ID return nahi kiya."
+            );
+
+          }
+
+
+          console.log(
+            "Rakhi created:",
+            slug
+          );
+
+
+          /* ==========================================
+             SURPRISE URL
+          =========================================== */
+
+          /*
+            Local testing:
+
+            http://127.0.0.1:5500/client/surprise.html?id=XXXX
+
+            Live deployment:
+
+            Current domain based URL.
+
+            IMPORTANT:
+            Server response me surpriseUrl bhi hai
+            to use prefer karenge.
+          */
+
+          let surpriseUrl =
+            result.surpriseUrl;
+
+
+          /*
+            Agar backend surpriseUrl nahi bhejta
+            to local/frontend URL generate karenge.
+          */
+
+          if (
+            !surpriseUrl
+          ) {
+
+            const currentUrl =
+              new URL(
+                window.location.href
+              );
+
+
+            /*
+              /client/index.html
+              ko
+              /client/surprise.html
+              se replace karna.
+            */
+
+            const fileUrl =
+              new URL(
+                "surprise.html",
+                currentUrl
+              );
+
+
+            fileUrl.searchParams.set(
+              "id",
+              slug
+            );
+
+
+            surpriseUrl =
+              fileUrl.toString();
+
+          }
+
+
+          console.log(
+            "Surprise URL:",
+            surpriseUrl
+          );
+
+
+          /* ==========================================
+             WHATSAPP
+          =========================================== */
+
+          const whatsappUrl =
+            createWhatsAppUrl(
+              cleanPhone,
+              sisterName,
+              brotherName,
+              surpriseUrl
+            );
+
+
+          /* ==========================================
+             SUCCESS UI
+          =========================================== */
+
+          loading.style.display =
+            "none";
+
+
+          success.style.display =
+            "block";
+
+
+          submitBtn.innerHTML =
+            "🎉 Surprise Created!";
+
+
+          confetti();
+
+
+          /* ==========================================
+             OPEN WHATSAPP
+          =========================================== */
+
+          setTimeout(
+            function () {
+
+              window.location.href =
+                whatsappUrl;
+
+            },
+            900
+          );
+
+
+        } catch (
+          error
+        ) {
+
+          console.error(
+            "Create Rakhi Error:",
+            error
+          );
+
+
+          loading.style.display =
+            "none";
+
+
+          success.style.display =
+            "none";
+
+
+          submitBtn.disabled =
+            false;
+
+
+          submitBtn.innerHTML =
+            "🎀 Create My Rakhi Surprise ❤️";
+
+
+          alert(
+            "❌ Surprise create nahi ho pa raha.\n\n" +
+            (
+              error.message ||
+              "Something went wrong."
+            )
+          );
+
+        }
+
+      }
+    );
+
+
+    /* =========================================================
+       PAGE LOAD
+    ========================================================= */
+
+    console.log(
+      "🎀 Rakhi Surprise frontend loaded"
+    );
+
+    console.log(
+      "Create API:",
+      CREATE_URL
+    );
+
+  </script>
+
+</body>
+</html>

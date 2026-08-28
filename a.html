@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Raksha Bandhan | Special Surprise</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-15px) rotate(5deg); }
+    }
+    .floating-icon {
+      animation: float 4s ease-in-out infinite;
+    }
+    .bg-festive {
+      background: linear-gradient(135deg, #ff4e50 0%, #f9d423 100%);
+    }
+  </style>
+</head>
+<body class="bg-amber-50 min-h-screen font-sans text-gray-800">
+
+  <div class="fixed inset-0 pointer-events-none overflow-hidden z-0 opacity-20">
+    <span class="floating-icon absolute top-10 left-5 text-4xl">🪔</span>
+    <span class="floating-icon absolute top-1/4 right-8 text-5xl" style="animation-delay: 1s;">🍬</span>
+    <span class="floating-icon absolute bottom-1/3 left-10 text-4xl" style="animation-delay: 2s;">🏵️</span>
+    <span class="floating-icon absolute bottom-10 right-5 text-5xl" style="animation-delay: 1.5s;">🎁</span>
+  </div>
+
+  <div class="relative z-10 max-w-lg mx-auto px-4 py-8">
+    
+    <div class="bg-festive rounded-3xl p-6 text-center text-white shadow-xl mb-6 transform transition hover:scale-105">
+      <div class="text-5xl mb-2">🧵✨</div>
+      <h1 class="text-3xl font-extrabold tracking-wide drop-shadow-md">Happy Raksha Bandhan</h1>
+      <p class="text-sm mt-2 opacity-90">Bhai-Behan ke pyaar ka sabse khaas surprise!</p>
+    </div>
+
+    <div class="bg-white rounded-3xl shadow-2xl p-6 border-2 border-amber-200">
+      <form id="rakhiForm" onsubmit="sendSurprise(event)" class="space-y-5">
+        
+        <div>
+          <label class="block text-sm font-semibold text-amber-900 mb-1">
+            <i class="fa-solid fa-phone text-rose-500 mr-1"></i> Brother's WhatsApp Number
+          </label>
+          <input type="tel" id="brotherPhone" required placeholder="10 digit phone number enter karein" 
+            class="w-full px-4 py-3 rounded-xl border border-amber-200 focus:ring-2 focus:ring-rose-400 focus:outline-none" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold text-amber-900 mb-1">
+            <i class="fa-solid fa-heart text-rose-500 mr-1"></i> Aapka Naam (Sister's Name)
+          </label>
+          <input type="text" id="sisterName" required placeholder="Apna pyara sa naam likhein" 
+            class="w-full px-4 py-3 rounded-xl border border-amber-200 focus:ring-2 focus:ring-rose-400 focus:outline-none" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold text-amber-900 mb-1">
+            <i class="fa-solid fa-envelope text-rose-500 mr-1"></i> Message for Brother
+          </label>
+          <textarea id="message" rows="3" required placeholder="Bhai ke liye koi dil chhu lene wala message..." 
+            class="w-full px-4 py-3 rounded-xl border border-amber-200 focus:ring-2 focus:ring-rose-400 focus:outline-none"></textarea>
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold text-amber-900 mb-1">
+            <i class="fa-solid fa-image text-rose-500 mr-1"></i> Aapki Photo (Drive/ImgBB Link)
+          </label>
+          <input type="url" id="sisterPhoto" placeholder="https://..." 
+            class="w-full px-4 py-3 rounded-xl border border-amber-200 focus:ring-2 focus:ring-rose-400 focus:outline-none" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold text-amber-900 mb-1">
+            <i class="fa-solid fa-qrcode text-rose-500 mr-1"></i> Shagun / QR Scanner Link
+          </label>
+          <input type="url" id="scannerPhoto" placeholder="Gift payment QR code link" 
+            class="w-full px-4 py-3 rounded-xl border border-amber-200 focus:ring-2 focus:ring-rose-400 focus:outline-none" />
+        </div>
+
+        <button type="submit" 
+          class="w-full bg-festive text-white font-bold py-4 rounded-xl shadow-lg hover:opacity-95 transition transform active:scale-95 text-lg flex items-center justify-center gap-2">
+          <span>Send Surprise to Brother</span>
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+
+    <div class="text-center mt-6 text-amber-800 text-sm font-medium">
+      Made with ❤️ for Raksha Bandhan
+    </div>
+  </div>
+
+  <script>
+    function sendSurprise(event) {
+      event.preventDefault();
+
+      const phone = document.getElementById('brotherPhone').value.trim();
+      const sister = document.getElementById('sisterName').value.trim();
+      const msg = document.getElementById('message').value.trim();
+      const sisterPic = document.getElementById('sisterPhoto').value.trim();
+      const qrCode = document.getElementById('scannerPhoto').value.trim();
+
+      // WhatsApp Message Formatting
+      let text = `✨ *HAPPY RAKSHA BANDHAN!* ✨%0A%0A`;
+      text += `Pyare Bhai, *${sister}* ne aapke liye ek special surprise bheja hai! ❤️%0A%0A`;
+      text += `📝 *Message:* "${msg}"%0A%0A`;
+      if(sisterPic) text += `🖼️ *Sister Photo:* ${sisterPic}%0A`;
+      if(qrCode) text += `💳 *Gift/Shagun Scanner:* ${qrCode}%0A%0A`;
+      text += `Happy Rakhi! 🎁🍬`;
+
+      // Redirecting directly to WhatsApp
+      const whatsappUrl = `https://wa.me/91${phone}?text=${text}`;
+      window.open(whatsappUrl, '_blank');
+    }
+  </script>
+</body>
+</html>

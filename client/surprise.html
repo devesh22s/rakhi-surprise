@@ -1,0 +1,2054 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="theme-color"
+    content="#a8144f"
+  >
+
+  <title>
+    Rakhi Surprise ❤️
+  </title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+
+      font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      color: #51182f;
+
+      background:
+        radial-gradient(
+          circle at 0% 0%,
+          rgba(255, 182, 210, .55),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 100% 10%,
+          rgba(255, 216, 151, .45),
+          transparent 28%
+        ),
+        linear-gradient(
+          135deg,
+          #fff2f7,
+          #fff9ee,
+          #ffedf4
+        );
+
+      overflow-x: hidden;
+    }
+
+
+    /* =====================================================
+       DECORATIONS
+    ===================================================== */
+
+    .decorations {
+      position: fixed;
+
+      inset: 0;
+
+      pointer-events: none;
+
+      overflow: hidden;
+
+      z-index: 0;
+    }
+
+    .floating {
+      position: absolute;
+
+      opacity: .35;
+
+      animation:
+        floatAround 8s
+        ease-in-out
+        infinite;
+    }
+
+    .floating:nth-child(1) {
+      top: 10%;
+      left: 5%;
+      font-size: 25px;
+    }
+
+    .floating:nth-child(2) {
+      top: 20%;
+      right: 6%;
+      font-size: 30px;
+      animation-delay: 1s;
+    }
+
+    .floating:nth-child(3) {
+      top: 45%;
+      left: 2%;
+      font-size: 22px;
+      animation-delay: 2s;
+    }
+
+    .floating:nth-child(4) {
+      top: 60%;
+      right: 4%;
+      font-size: 27px;
+      animation-delay: 3s;
+    }
+
+    .floating:nth-child(5) {
+      bottom: 10%;
+      left: 10%;
+      font-size: 25px;
+      animation-delay: 4s;
+    }
+
+    .floating:nth-child(6) {
+      bottom: 18%;
+      right: 12%;
+      font-size: 30px;
+      animation-delay: 5s;
+    }
+
+    @keyframes floatAround {
+
+      0%,
+      100% {
+        transform:
+          translateY(0)
+          rotate(0deg);
+      }
+
+      50% {
+        transform:
+          translateY(-20px)
+          rotate(8deg);
+      }
+
+    }
+
+
+    /* =====================================================
+       LOADING
+    ===================================================== */
+
+    .loading-screen {
+
+      min-height: 100vh;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      text-align:
+        center;
+
+      padding:
+        20px;
+
+      position:
+        relative;
+
+      z-index:
+        5;
+
+    }
+
+    .loading-content {
+
+      width:
+        min(
+          450px,
+          100%
+        );
+
+      padding:
+        35px 20px;
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          .92
+        );
+
+      border-radius:
+        25px;
+
+      box-shadow:
+        0 20px 60px
+        rgba(
+          113,
+          24,
+          60,
+          .14
+        );
+
+    }
+
+    .spinner {
+
+      width:
+        55px;
+
+      height:
+        55px;
+
+      margin:
+        0 auto 18px;
+
+      border:
+        5px solid
+        #f5d2df;
+
+      border-top-color:
+        #b51551;
+
+      border-radius:
+        50%;
+
+      animation:
+        spin
+        .8s
+        linear
+        infinite;
+
+    }
+
+    @keyframes spin {
+
+      to {
+        transform:
+          rotate(360deg);
+      }
+
+    }
+
+    .loading-content h2 {
+
+      color:
+        #9e1249;
+
+      font-size:
+        22px;
+
+    }
+
+    .loading-content p {
+
+      margin-top:
+        8px;
+
+      color:
+        #8e6879;
+
+      font-size:
+        13px;
+
+    }
+
+
+    /* =====================================================
+       MAIN
+    ===================================================== */
+
+    .page {
+
+      position:
+        relative;
+
+      z-index:
+        2;
+
+      width:
+        min(
+          900px,
+          calc(100% - 20px)
+        );
+
+      margin:
+        auto;
+
+      padding:
+        25px 0 50px;
+
+    }
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .hero {
+
+      text-align:
+        center;
+
+      padding:
+        25px 15px;
+
+    }
+
+    .rakhi-icon {
+
+      font-size:
+        75px;
+
+      display:
+        inline-block;
+
+      animation:
+        rakhiPulse
+        2s
+        ease-in-out
+        infinite;
+
+    }
+
+    @keyframes rakhiPulse {
+
+      0%,
+      100% {
+
+        transform:
+          scale(1)
+          rotate(-3deg);
+
+      }
+
+      50% {
+
+        transform:
+          scale(1.08)
+          rotate(3deg);
+
+      }
+
+    }
+
+    .hero h1 {
+
+      margin-top:
+        10px;
+
+      font-family:
+        Georgia,
+        serif;
+
+      font-size:
+        clamp(
+          34px,
+          8vw,
+          65px
+        );
+
+      line-height:
+        1.05;
+
+      color:
+        #a9124b;
+
+    }
+
+    .hero p {
+
+      margin-top:
+        10px;
+
+      color:
+        #7c5064;
+
+      font-size:
+        16px;
+
+      line-height:
+        1.6;
+
+    }
+
+
+    /* =====================================================
+       CARD
+    ===================================================== */
+
+    .card {
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          .92
+        );
+
+      backdrop-filter:
+        blur(15px);
+
+      border:
+        1px solid
+        rgba(
+          255,
+          255,
+          255,
+          .95
+        );
+
+      border-radius:
+        30px;
+
+      padding:
+        clamp(
+          20px,
+          5vw,
+          40px
+        );
+
+      margin-bottom:
+        22px;
+
+      box-shadow:
+        0 25px 75px
+        rgba(
+          112,
+          23,
+          59,
+          .15
+        );
+
+      text-align:
+        center;
+
+    }
+
+
+    /* =====================================================
+       NAMES
+    ===================================================== */
+
+    .brother {
+
+      font-size:
+        clamp(
+          30px,
+          7vw,
+          48px
+        );
+
+      color:
+        #a9114d;
+
+      font-weight:
+        900;
+
+    }
+
+    .from {
+
+      display:
+        block;
+
+      margin:
+        8px 0;
+
+      color:
+        #987286;
+
+      font-size:
+        14px;
+
+    }
+
+    .sister {
+
+      font-size:
+        clamp(
+          24px,
+          5vw,
+          38px
+        );
+
+      color:
+        #e06b20;
+
+      font-weight:
+        850;
+
+    }
+
+
+    /* =====================================================
+       MESSAGE
+    ===================================================== */
+
+    .message-card {
+
+      margin-top:
+        24px;
+
+      padding:
+        25px 20px;
+
+      border-radius:
+        22px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #fff0f6,
+          #fff8ea
+        );
+
+      border:
+        1px solid
+        #f2cfdb;
+
+    }
+
+    .message-icon {
+
+      font-size:
+        37px;
+
+      margin-bottom:
+        10px;
+
+    }
+
+    .message {
+
+      color:
+        #60354a;
+
+      font-size:
+        17px;
+
+      line-height:
+        1.85;
+
+      white-space:
+        pre-wrap;
+
+    }
+
+    .signature {
+
+      margin-top:
+        16px;
+
+      color:
+        #ad2057;
+
+      font-weight:
+        800;
+
+      font-size:
+        14px;
+
+    }
+
+
+    /* =====================================================
+       PHOTO
+    ===================================================== */
+
+    .photo-section {
+
+      display:
+        none;
+
+    }
+
+    .photo-title {
+
+      color:
+        #931347;
+
+      font-size:
+        23px;
+
+      margin-bottom:
+        13px;
+
+    }
+
+    .photo {
+
+      width:
+        100%;
+
+      max-width:
+        500px;
+
+      max-height:
+        520px;
+
+      object-fit:
+        contain;
+
+      margin:
+        0 auto;
+
+      border-radius:
+        23px;
+
+      border:
+        5px solid white;
+
+      background:
+        #fff8fb;
+
+      box-shadow:
+        0 15px 45px
+        rgba(
+          80,
+          19,
+          48,
+          .15
+        );
+
+    }
+
+
+    /* =====================================================
+       GIFT
+    ===================================================== */
+
+    .gift-section {
+
+      display:
+        none;
+
+    }
+
+    .gift-icon {
+
+      font-size:
+        55px;
+
+    }
+
+    .gift-title {
+
+      margin-top:
+        8px;
+
+      color:
+        #986213;
+
+      font-size:
+        25px;
+
+      font-weight:
+        900;
+
+    }
+
+    .gift-text {
+
+      margin-top:
+        8px;
+
+      color:
+        #7a5c43;
+
+      font-size:
+        14px;
+
+      line-height:
+        1.6;
+
+    }
+
+
+    /* =====================================================
+       QR
+    ===================================================== */
+
+    .qr-wrapper {
+
+      display:
+        none;
+
+      margin-top:
+        20px;
+
+    }
+
+    .qr-wrapper h3 {
+
+      color:
+        #744218;
+
+      font-size:
+        17px;
+
+    }
+
+    .qr-image {
+
+      width:
+        250px;
+
+      max-width:
+        100%;
+
+      padding:
+        10px;
+
+      margin:
+        15px auto 0;
+
+      border-radius:
+        18px;
+
+      background:
+        white;
+
+      box-shadow:
+        0 10px 30px
+        rgba(
+          70,
+          45,
+          10,
+          .10
+        );
+
+    }
+
+
+    /* =====================================================
+       UPI
+    ===================================================== */
+
+    .upi-wrapper {
+
+      display:
+        none;
+
+      margin-top:
+        18px;
+
+    }
+
+    .upi-label {
+
+      color:
+        #75502e;
+
+      font-size:
+        13px;
+
+    }
+
+    .upi {
+
+      display:
+        inline-block;
+
+      margin-top:
+        7px;
+
+      padding:
+        11px 15px;
+
+      border-radius:
+        12px;
+
+      background:
+        white;
+
+      color:
+        #a3164e;
+
+      font-weight:
+        800;
+
+      word-break:
+        break-word;
+
+    }
+
+
+    /* =====================================================
+       SHARE
+    ===================================================== */
+
+    .share-button {
+
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      gap:
+        8px;
+
+      margin-top:
+        5px;
+
+      padding:
+        14px 20px;
+
+      border-radius:
+        15px;
+
+      text-decoration:
+        none;
+
+      background:
+        #25d366;
+
+      color:
+        white;
+
+      font-size:
+        14px;
+
+      font-weight:
+        850;
+
+      box-shadow:
+        0 10px 25px
+        rgba(
+          37,
+          211,
+          102,
+          .22
+        );
+
+    }
+
+
+    /* =====================================================
+       ERROR
+    ===================================================== */
+
+    .error-screen {
+
+      min-height:
+        100vh;
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      text-align:
+        center;
+
+      padding:
+        20px;
+
+    }
+
+    .error-card {
+
+      width:
+        min(
+          500px,
+          100%
+        );
+
+      padding:
+        35px 22px;
+
+      background:
+        white;
+
+      border-radius:
+        25px;
+
+      box-shadow:
+        0 25px 70px
+        rgba(
+          0,
+          0,
+          0,
+          .12
+        );
+
+    }
+
+    .error-icon {
+
+      font-size:
+        55px;
+
+    }
+
+    .error-card h2 {
+
+      margin-top:
+        10px;
+
+      color:
+        #a81850;
+
+    }
+
+    .error-card p {
+
+      margin-top:
+        9px;
+
+      color:
+        #795769;
+
+      line-height:
+        1.6;
+
+      font-size:
+        13px;
+
+    }
+
+    .home-button {
+
+      display:
+        inline-block;
+
+      margin-top:
+        20px;
+
+      padding:
+        12px 18px;
+
+      border-radius:
+        12px;
+
+      background:
+        #b51652;
+
+      color:
+        white;
+
+      text-decoration:
+        none;
+
+      font-weight:
+        800;
+
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+
+      text-align:
+        center;
+
+      color:
+        #916a7c;
+
+      font-size:
+        12px;
+
+      line-height:
+        1.7;
+
+      padding:
+        10px 15px 30px;
+
+    }
+
+
+    /* =====================================================
+       CONFETTI
+    ===================================================== */
+
+    .confetti {
+
+      position:
+        fixed;
+
+      top:
+        -30px;
+
+      z-index:
+        999;
+
+      pointer-events:
+        none;
+
+      animation:
+        fall
+        3.5s
+        linear
+        forwards;
+
+    }
+
+    @keyframes fall {
+
+      0% {
+
+        transform:
+          translateY(-20px)
+          rotate(0deg);
+
+        opacity:
+          1;
+
+      }
+
+      100% {
+
+        transform:
+          translateY(110vh)
+          rotate(720deg);
+
+        opacity:
+          0;
+
+      }
+
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 600px) {
+
+      .page {
+
+        width:
+          calc(100% - 12px);
+
+      }
+
+      .hero {
+
+        padding:
+          20px 10px;
+
+      }
+
+      .rakhi-icon {
+
+        font-size:
+          58px;
+
+      }
+
+      .hero h1 {
+
+        font-size:
+          37px;
+
+      }
+
+      .hero p {
+
+        font-size:
+          13px;
+
+      }
+
+      .card {
+
+        padding:
+          22px 15px;
+
+        border-radius:
+          23px;
+
+      }
+
+      .message {
+
+        font-size:
+          15px;
+
+        line-height:
+          1.7;
+
+      }
+
+      .share-button {
+
+        width:
+          100%;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       BACKGROUND
+  ====================================================== -->
+
+  <div class="decorations">
+
+    <span class="floating">
+      ❤️
+    </span>
+
+    <span class="floating">
+      🌸
+    </span>
+
+    <span class="floating">
+      ✨
+    </span>
+
+    <span class="floating">
+      🎀
+    </span>
+
+    <span class="floating">
+      🍬
+    </span>
+
+    <span class="floating">
+      💖
+    </span>
+
+  </div>
+
+
+  <!-- =====================================================
+       LOADING
+  ====================================================== -->
+
+  <div
+    id="loadingScreen"
+    class="loading-screen"
+  >
+
+    <div class="loading-content">
+
+      <div class="spinner"></div>
+
+      <h2>
+        Your Rakhi Surprise is Opening... ❤️
+      </h2>
+
+      <p>
+        Just a moment...
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       ERROR
+  ====================================================== -->
+
+  <div
+    id="errorScreen"
+    class="error-screen"
+    style="display:none;"
+  >
+
+    <div class="error-card">
+
+      <div class="error-icon">
+        😔
+      </div>
+
+      <h2>
+        Surprise Not Found
+      </h2>
+
+      <p id="errorMessage">
+        This Rakhi surprise could not be found.
+      </p>
+
+      <a
+        href="/"
+        class="home-button"
+      >
+        Create New Surprise
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       CONTENT
+  ====================================================== -->
+
+  <div
+    id="content"
+    style="display:none;"
+  >
+
+    <main class="page">
+
+
+      <!-- HERO -->
+
+      <section class="hero">
+
+        <div class="rakhi-icon">
+          🪢
+        </div>
+
+        <h1>
+          Happy Raksha Bandhan ❤️
+        </h1>
+
+        <p>
+          A special surprise made with love
+        </p>
+
+      </section>
+
+
+      <!-- MAIN CARD -->
+
+      <section class="card">
+
+
+        <div
+          id="brotherName"
+          class="brother"
+        >
+          Bhaiya
+        </div>
+
+
+        <span class="from">
+          With lots of love from
+        </span>
+
+
+        <div
+          id="sisterName"
+          class="sister"
+        >
+          Your Sister
+        </div>
+
+
+        <!-- MESSAGE -->
+
+        <div class="message-card">
+
+          <div class="message-icon">
+            💌
+          </div>
+
+          <div
+            id="message"
+            class="message"
+          >
+          </div>
+
+          <div
+            id="signature"
+            class="signature"
+          >
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- SISTER PHOTO -->
+
+      <section
+        id="sisterPhotoSection"
+        class="card photo-section"
+      >
+
+        <h2 class="photo-title">
+          📸 A Beautiful Memory
+        </h2>
+
+        <img
+          id="sisterPhoto"
+          class="photo"
+          alt="Sister's Photo"
+        >
+
+      </section>
+
+
+      <!-- RAKHI PHOTO -->
+
+      <section
+        id="rakhiPhotoSection"
+        class="card photo-section"
+      >
+
+        <h2 class="photo-title">
+          🎀 Your Special Rakhi
+        </h2>
+
+        <img
+          id="rakhiPhoto"
+          class="photo"
+          alt="Rakhi Photo"
+        >
+
+      </section>
+
+
+      <!-- GIFT -->
+
+      <section
+        id="giftSection"
+        class="card gift-section"
+      >
+
+        <div class="gift-icon">
+          🎁
+        </div>
+
+        <div class="gift-title">
+          A Little Rakhi Gift
+        </div>
+
+        <div class="gift-text">
+          Bhaiya, ye chhota sa gift bhi tumhare liye hai.
+          ❤️
+        </div>
+
+
+        <!-- QR -->
+
+        <div
+          id="qrWrapper"
+          class="qr-wrapper"
+        >
+
+          <h3>
+            💳 Gift / Payment QR
+          </h3>
+
+          <img
+            id="qrImage"
+            class="qr-image"
+            alt="Payment QR"
+          >
+
+        </div>
+
+
+        <!-- UPI -->
+
+        <div
+          id="upiWrapper"
+          class="upi-wrapper"
+        >
+
+          <div class="upi-label">
+            💰 UPI ID
+          </div>
+
+          <div
+            id="upiId"
+            class="upi"
+          >
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- SHARE -->
+
+      <section class="card">
+
+        <h3
+          style="
+            color:#8f1747;
+            margin-bottom:8px;
+          "
+        >
+          ❤️ Loved Your Surprise?
+        </h3>
+
+        <p
+          style="
+            color:#7f6070;
+            font-size:13px;
+            line-height:1.6;
+          "
+        >
+          Share this special Rakhi moment with your family.
+        </p>
+
+        <a
+          id="shareButton"
+          href="#"
+          class="share-button"
+          target="_blank"
+          rel="noopener"
+        >
+          💚 Share On WhatsApp
+        </a>
+
+      </section>
+
+
+      <footer>
+
+        Made with ❤️ for Raksha Bandhan
+
+        <br>
+
+        🪢 Forever Brother & Sister 🪢
+
+      </footer>
+
+
+    </main>
+
+  </div>
+
+
+  <!-- =====================================================
+       JAVASCRIPT
+  ====================================================== -->
+
+  <script>
+
+
+    /* =====================================================
+       ELEMENTS
+    ===================================================== */
+
+    const loadingScreen =
+      document.getElementById(
+        "loadingScreen"
+      );
+
+
+    const errorScreen =
+      document.getElementById(
+        "errorScreen"
+      );
+
+
+    const errorMessage =
+      document.getElementById(
+        "errorMessage"
+      );
+
+
+    const content =
+      document.getElementById(
+        "content"
+      );
+
+
+    /* =====================================================
+       GET SLUG FROM URL PATH
+    =====================================================
+
+       URL example:
+
+       http://localhost:5000/rakhi/c94sZiyiGA
+
+       pathname:
+
+       /rakhi/c94sZiyiGA
+
+       Last part:
+
+       c94sZiyiGA
+    */
+
+    function getRakhiSlug() {
+
+      const pathname =
+        window.location.pathname;
+
+
+      const parts =
+        pathname
+          .split("/")
+          .filter(
+            part => part.length > 0
+          );
+
+
+      /*
+        Expected:
+
+        ["rakhi", "c94sZiyiGA"]
+      */
+
+
+      if (
+        parts.length >= 2 &&
+        parts[0] === "rakhi"
+      ) {
+
+        return parts[1];
+
+      }
+
+
+      return null;
+
+    }
+
+
+    const slug =
+      getRakhiSlug();
+
+
+    console.log(
+      "Rakhi slug:",
+      slug
+    );
+
+
+    /* =====================================================
+       SHOW ERROR
+    ===================================================== */
+
+    function showError(
+      message
+    ) {
+
+      loadingScreen.style.display =
+        "none";
+
+
+      content.style.display =
+        "none";
+
+
+      errorScreen.style.display =
+        "flex";
+
+
+      errorMessage.textContent =
+        message;
+
+    }
+
+
+    /* =====================================================
+       ADD CONFETTI
+    ===================================================== */
+
+    function createConfetti() {
+
+      const emojis = [
+        "❤️",
+        "💖",
+        "✨",
+        "🎀",
+        "🌸",
+        "🪢",
+        "🍬",
+        "💝"
+      ];
+
+
+      for (
+        let i = 0;
+        i < 55;
+        i++
+      ) {
+
+        const element =
+          document.createElement(
+            "div"
+          );
+
+
+        element.className =
+          "confetti";
+
+
+        element.textContent =
+          emojis[
+            Math.floor(
+              Math.random() *
+              emojis.length
+            )
+          ];
+
+
+        element.style.left =
+          Math.random() *
+          100 +
+          "%";
+
+
+        element.style.animationDelay =
+          Math.random() *
+          1.2 +
+          "s";
+
+
+        element.style.fontSize =
+          10 +
+          Math.random() *
+          15 +
+          "px";
+
+
+        document.body.appendChild(
+          element
+        );
+
+
+        setTimeout(
+          () => {
+            element.remove();
+          },
+          4500
+        );
+
+      }
+
+    }
+
+
+    /* =====================================================
+       SET PHOTO
+    ===================================================== */
+
+    function setupPhoto(
+      sectionId,
+      imageId,
+      url
+    ) {
+
+      if (!url) {
+        return;
+      }
+
+
+      const section =
+        document.getElementById(
+          sectionId
+        );
+
+
+      const image =
+        document.getElementById(
+          imageId
+        );
+
+
+      image.src =
+        url;
+
+
+      image.onload =
+        function () {
+
+          section.style.display =
+            "block";
+
+        };
+
+
+      image.onerror =
+        function () {
+
+          section.style.display =
+            "none";
+
+        };
+
+    }
+
+
+    /* =====================================================
+       LOAD RAKHI
+    ===================================================== */
+
+    async function loadRakhi() {
+
+      try {
+
+        /* -----------------------------------------------
+           SLUG CHECK
+        ------------------------------------------------ */
+
+        if (
+          !slug ||
+          slug === "undefined"
+        ) {
+
+          throw new Error(
+            "Rakhi ID is missing from the URL."
+          );
+
+        }
+
+
+        /* -----------------------------------------------
+           BACKEND
+        ------------------------------------------------ */
+
+        const apiUrl =
+          `/api/rakhi/${encodeURIComponent(slug)}`;
+
+
+        console.log(
+          "Fetching:",
+          apiUrl
+        );
+
+
+        const response =
+          await fetch(
+            apiUrl
+          );
+
+
+        const result =
+          await response.json();
+
+
+        console.log(
+          "Rakhi API response:",
+          result
+        );
+
+
+        /* -----------------------------------------------
+           RESPONSE CHECK
+        ------------------------------------------------ */
+
+        if (
+          !response.ok ||
+          !result.success
+        ) {
+
+          throw new Error(
+            result.message ||
+            "Rakhi surprise not found."
+          );
+
+        }
+
+
+        /* -----------------------------------------------
+           DATA
+        ------------------------------------------------ */
+
+        const rakhi =
+          result.rakhi ||
+          result.data;
+
+
+        if (!rakhi) {
+
+          throw new Error(
+            "Rakhi data was not returned by server."
+          );
+
+        }
+
+
+        console.log(
+          "Loaded Rakhi:",
+          rakhi
+        );
+
+
+        /* ===============================================
+           NAMES
+        =============================================== */
+
+        document
+          .getElementById(
+            "brotherName"
+          )
+          .textContent =
+          rakhi.brotherName ||
+          "Bhaiya";
+
+
+        document
+          .getElementById(
+            "sisterName"
+          )
+          .textContent =
+          rakhi.sisterName ||
+          "Your Sister";
+
+
+        document
+          .getElementById(
+            "signature"
+          )
+          .textContent =
+          `With love, ${rakhi.sisterName || "Your Sister"} ❤️`;
+
+
+        /* ===============================================
+           MESSAGE
+        =============================================== */
+
+        const defaultMessage =
+
+`Happy Raksha Bandhan! ❤️
+
+Tum mere liye sirf mere brother nahi ho,
+balki meri life ka ek bahut special part ho.
+
+Hamesha khush rehna,
+healthy rehna aur aise hi smile karte rehna.
+
+Love you Bhaiya! 🪢❤️`;
+
+
+        document
+          .getElementById(
+            "message"
+          )
+          .textContent =
+          rakhi.message ||
+          defaultMessage;
+
+
+        /* ===============================================
+           SISTER PHOTO
+        =============================================== */
+
+        setupPhoto(
+          "sisterPhotoSection",
+          "sisterPhoto",
+          rakhi.sisterPhoto
+        );
+
+
+        /* ===============================================
+           RAKHI PHOTO
+        =============================================== */
+
+        setupPhoto(
+          "rakhiPhotoSection",
+          "rakhiPhoto",
+          rakhi.rakhiPhoto
+        );
+
+
+        /* ===============================================
+           GIFT
+        =============================================== */
+
+        const hasQR =
+          !!rakhi.qrPhoto;
+
+
+        const hasUPI =
+          !!(
+            rakhi.upiId &&
+            rakhi.upiId.trim()
+          );
+
+
+        if (
+          hasQR ||
+          hasUPI
+        ) {
+
+          document
+            .getElementById(
+              "giftSection"
+            )
+            .style.display =
+            "block";
+
+        }
+
+
+        /* ===============================================
+           QR
+        =============================================== */
+
+        if (hasQR) {
+
+          const qrWrapper =
+            document.getElementById(
+              "qrWrapper"
+            );
+
+
+          const qrImage =
+            document.getElementById(
+              "qrImage"
+            );
+
+
+          qrImage.src =
+            rakhi.qrPhoto;
+
+
+          qrImage.onload =
+            function () {
+
+              qrWrapper.style.display =
+                "block";
+
+            };
+
+        }
+
+
+        /* ===============================================
+           UPI
+        =============================================== */
+
+        if (hasUPI) {
+
+          document
+            .getElementById(
+              "upiId"
+            )
+            .textContent =
+            rakhi.upiId;
+
+
+          document
+            .getElementById(
+              "upiWrapper"
+            )
+            .style.display =
+            "block";
+
+        }
+
+
+        /* ===============================================
+           SHARE URL
+        =============================================== */
+
+        const shareButton =
+          document.getElementById(
+            "shareButton"
+          );
+
+
+        const shareText =
+
+`🎀 Happy Raksha Bandhan ❤️
+
+${rakhi.sisterName || "My Sister"} ne ${rakhi.brotherName || "Bhaiya"} ke liye ek beautiful Rakhi surprise banaya hai! 🎁
+
+Open this special surprise:
+
+${window.location.href}
+
+🪢❤️`;
+
+
+        shareButton.href =
+          `https://wa.me/?text=${encodeURIComponent(
+            shareText
+          )}`;
+
+
+        /* ===============================================
+           SHOW
+        =============================================== */
+
+        loadingScreen.style.display =
+          "none";
+
+
+        content.style.display =
+          "block";
+
+
+        /* ===============================================
+           CONFETTI
+        =============================================== */
+
+        setTimeout(
+          createConfetti,
+          300
+        );
+
+
+      }
+      catch (error) {
+
+        console.error(
+          "Load Rakhi Error:",
+          error
+        );
+
+
+        showError(
+          error.message ||
+          "Unable to load Rakhi surprise."
+        );
+
+      }
+
+    }
+
+
+    /* =====================================================
+       START
+    ===================================================== */
+
+    loadRakhi();
+
+  </script>
+
+</body>
+
+</html>
